@@ -35,7 +35,7 @@
             },
             {
                "name": "Clone actions/runner-images",
-               "run": "git clone --depth 1 https://github.com/actions/runner-images\ncd runner-images\nexport DIR=$(pwd)\necho \"dir=${DIR}\" >> $GITHUB_ENV\necho \"virtual-environments-hash=$(git rev-parse --short HEAD)\" >> $GITHUB_ENV\necho \"build-date=$(date '+%Y%m%d')\" >> $GITHUB_ENV\necho \"os-release=$(cat /etc/lsb-release | grep DISTRIB_RELEASE | cut -d'=' -f2)\" >> $GITHUB_ENV\n",
+               "run": "git clone https://github.com/actions/runner-images\ncd runner-images\ngit checkout 0790ef6e2af691401215c0ecb0a34c792c03fde7\nexport DIR=$(pwd)\necho \"dir=${DIR}\" >> $GITHUB_ENV\necho \"virtual-environments-hash=$(git rev-parse --short HEAD)\" >> $GITHUB_ENV\necho \"build-date=$(date '+%Y%m%d')\" >> $GITHUB_ENV\necho \"os-release=$(cat /etc/lsb-release | grep DISTRIB_RELEASE | cut -d'=' -f2)\" >> $GITHUB_ENV\n",
                "shell": "bash"
             },
             {
