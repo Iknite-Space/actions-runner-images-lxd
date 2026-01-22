@@ -90,7 +90,7 @@
             },
             {
                "name": "Build by distrobuilder",
-               "run": "sudo mkdir -p /mnt/cache\nsudo mkdir -p /mnt/output\nlxc publish packer-lxd --alias packer-lxd\nlxc image export packer-lxd /mnt/output/runner\n",
+               "run": "sudo mkdir -p /mnt/cache\nsudo mkdir -p /mnt/output\nsudo chown runner:runner /mnt/output\nlxc publish packer-lxd --alias packer-lxd\nlxc image export packer-lxd /mnt/output/runner\n",
                "shell": "bash"
             },
             {
